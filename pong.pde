@@ -1,9 +1,23 @@
+/*
+*  Project: Pong group project
+*  Student:  James Hu, Sergio Hidalgo, Moo Kyung Sohn
+*  Pasadena  City  College,  Spring  2017  
+*  Instructor  Masood  Kamandy  
+*    
+*  Project  Description:  This is a clone of the classic video
+*  game that combines 70's Atari and 80's era Nintendo elements
+*
+*  Last  Modified:  May  15,  2017  
+*    
+*/
+
 import ddf.minim.*;
 Minim minim;
 AudioPlayer out;
 AudioPlayer beep;
 AudioPlayer win;
 AudioPlayer intro;
+
 // game state (true or false) to detect game over condition (one of the score reaches 11)
 boolean gameInPlay;
 
@@ -82,14 +96,14 @@ void draw() {
 
 void displayIntro() {
   intro.play();
-  textSize(width / 16-s);
+  //textSize(width / 16-s);
   textAlign(CENTER);
   font= createFont("8-BIT WONDER.TTF", 110);
 
 
   textFont(font);
   fill(0, 255,0);
-    textSize(110+.6*s);
+  textSize(110 +.45*s);
   text("PONG", width / 2, height / 2.5);
   s+=1;
 
